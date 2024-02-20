@@ -12,32 +12,36 @@ import {persistReducer, persistStore} from "redux-persist";
 import {Provider} from "react-redux";
 
 //redux
-const persistConFig = {
-    key : 'root',
+const persistConfig = {
+    key: 'root',
     storage: storageSession
 }
 
 const rootReducer = combineReducers({
-    auth: authReducer()
-    });
+    auth: authReducer,
+})
 
-const persistedReducer = persistReducer(persistConFig, rootReducer);
+const persistedReducer = persistReducer(persistConfig, rootReducer);
 
-const store = createStore(persistedReducer);
+const store = createStore(
+    persistedReducer,
+);
 
 const persistor = persistStore(store);
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
-  <React.StrictMode>
-      <Provider store={store}>
-          <PersistGate loading={null} persistor={persistor}>
-              <BrowserRouter>
-                  <App />
-              </BrowserRouter>
-          </PersistGate>
-      </Provider>
-  </React.StrictMode>
+    <React.StrictMode>
+        <Provider store={store}>
+            <PersistGate loading = {null} persistor = {persistor}>
+                <BrowserRouter>
+                    <App />
+                </BrowserRouter>
+            </PersistGate>
+        </Provider>
+    </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
