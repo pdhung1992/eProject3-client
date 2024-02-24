@@ -3694,7 +3694,8 @@ fieldset:disabled .btn {
 }
 
 .nav-link:hover, .nav-link:focus {
-    color: #00457c;
+    color: #ffffff;
+    text-shadow: 0 0 1px #00457c;
     text-decoration: none;
 }
 
@@ -3796,10 +3797,7 @@ fieldset:disabled .btn {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    padding-top: 0.5rem;
-    padding-right: 1rem;
-    padding-bottom: 0.5rem;
-    padding-left: 1rem;
+    padding: 0.5rem 1rem;
     background-color: rgba(30, 161, 241, 0.3);
     transition: background-color 0.2s ease;
 }
@@ -3821,6 +3819,7 @@ fieldset:disabled .btn {
     }
     .navbar.navbar-shrink .navbar-nav .nav-item .nav-link:hover {
         color: #ffffff;
+        text-shadow: 0 0 1px #ffffff;
     }
     .navbar.navbar-shrink .navbar-nav .nav-item .btn-outline-dark {
         color: #ffffff;
@@ -18462,7 +18461,7 @@ iframe {
 
 .hero-title {
     font-weight: 700;
-    font-size: 2.88651rem;
+    font-size: 2.28651rem;
     color: #181E4B;
     margin-bottom: 5px;
     position: relative;
@@ -18471,13 +18470,13 @@ iframe {
 
 @media (min-width: 1200px) {
     .hero-title {
-        font-size: 4.62363rem;
+        font-size: 4.02363rem;
     }
 }
 
 @media (min-width: 1400px) {
     .hero-title {
-        font-size: 5.20158rem;
+        font-size: 4.80158rem;
     }
 }
 
@@ -18621,4 +18620,3 @@ iframe {
 |   User Styles
 -----------------------------------------------*/
 
-/*# sourceMappingURL=theme.css.map */
