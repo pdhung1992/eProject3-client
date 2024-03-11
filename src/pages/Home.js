@@ -1,577 +1,391 @@
-import '../assets/css/home.css'
+
+import '../assets/css/homePage.css';
+import '../assets/animate/animate.css';
+import '../assets/js/main';
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import { faClockRotateLeft, faUtensils, faCircleInfo, faCircleRight, faPeopleGroup, faTruckFast, faCreditCard, faLocationArrow, faPizzaSlice } from '@fortawesome/free-solid-svg-icons';
 import {Link} from "react-router-dom";
-import {useEffect} from "react";
 
-const Home = () => {
-
-    useEffect(() => {
-        const handleScroll = () => {
-            const mainNav = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                mainNav.classList.add('navbar-shrink');
-            } else {
-                mainNav.classList.remove('navbar-shrink');
-            }
-        };
-
-        window.addEventListener('scroll', handleScroll);
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
-
+const HomePage = () => {
     return(
-        <div>
-            <main className="main" id="top">
-                <nav className="navbar navbar-expand-lg navbar-light fixed-top py-5 d-block"
-                     data-navbar-on-scroll="data-navbar-on-scroll">
-                    <div className="container"><a className="navbar-brand" href="index.html"><img
-                        src="/img/logo.svg" height="34" alt="logo"/></a>
-                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                                aria-expanded="false" aria-label="Toggle navigation"><span
-                            className="navbar-toggler-icon"> </span></button>
-                        <div className="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0"
-                             id="navbarSupportedContent">
-                            <ul className="navbar-nav ms-auto pt-2 pt-lg-0 font-base align-items-lg-center align-items-start">
-                                <li className="nav-item px-3 px-xl-4"><a className="nav-link fw-bold"
-                                                                         aria-current="page" href="#service">Service</a>
+        <div className="container-xxl p-0">
+            <div className="container-xxl position-relative p-0">
+                <div className="container-xxl bg-hero hero-header">
+                    <div className="container">
+                        <div className="row g-5 align-items-center">
+                            <div className="col-lg-6 text-center text-lg-start">
+                                <h1 className="text-white mb-4 animated slideInDown">Need food for a party? Go with the pros.</h1>
+                                <p className="text-white pb-3 animated slideInDown"><FontAwesomeIcon icon={faUtensils}/> Over 1000 restaurants</p>
+                                <p className="text-white pb-3 animated slideInDown"><FontAwesomeIcon icon={faClockRotateLeft}/> Delivered on time, as ordered</p>
+                                <p className="text-white pb-3 animated slideInDown"><FontAwesomeIcon icon={faPeopleGroup}/> Any group size, dietary need, or budget</p>
+                                <p className="text-white pb-3 animated slideInDown"><FontAwesomeIcon icon={faTruckFast}/> Reach a human in seconds, 24/7</p>
+                                <div className="position-relative w-100 mt-3">
+                                    <input className="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text" placeholder="Enter your address" style={{height: '58px'}}/>
+                                        <button type="button" className="btn btn-primary rounded-pill py-2 px-3 shadow-none position-absolute top-0 end-0 m-2">Go!</button>
+                                </div>
+                            </div>
+                            <div className="col-lg-6 text-center text-lg-start">
+                                <img className="img-fluid rounded animated zoomIn" src="/img/hero.png" alt=""/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div className="container-xxl py-2">
+                <div className="container">
+                    <div className="row g-4">
+                        <div className="col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                            <div className="feature-item bg-light rounded text-center p-5">
+                                <FontAwesomeIcon className="fa fa-4x text-primary mb-4" icon={faClockRotateLeft}/>
+                                <h5 className="mb-3">On time, as ordered</h5>
+                                <p className="m-0">Get food you can rely on for your meetings and events — professionally prepared and delivered.</p>
+                            </div>
+                        </div>
+                        <div className="col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                            <div className="feature-item bg-light rounded text-center p-5">
+                                <FontAwesomeIcon className="fa fa-4x text-primary mb-4" icon={faUtensils}/>
+                                <h5 className="mb-3">Lots (and lots) of variety</h5>
+                                <p className="m-0">Find food for any taste, dietary need, or budget — with over 1000 restaurants nationwide, you’ll never run out of options.</p>
+                            </div>
+                        </div>
+                        <div className="col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                            <div className="feature-item bg-light rounded text-center p-5">
+                                <FontAwesomeIcon className="fa fa-4x text-primary mb-4" icon={faCircleInfo}/>
+                                <h5 className="mb-3">24/7 support — and beyond</h5>
+                                <p className="m-0">Reach a human in seconds by phone, text, or email. Behind the scenes, we’re with your order all the way.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div className="container-xxl py-6" id="about">
+                <div className="container">
+                    <div className="row g-5 flex-column-reverse flex-lg-row">
+                        <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                            <h1 className="mb-4">Make party catering easily</h1>
+                            <div className="d-flex mb-4">
+                                <div className="flex-shrink-0 btn-square rounded-circle bg-primary text-white">
+                                    <i className="fa fa-check"></i>
+                                </div>
+                                <div className="ms-4">
+                                    <h5>Customizable party program</h5>
+                                    <p className="mb-0">You set the food and the itinerary. We complete everything involved</p>
+                                </div>
+                            </div>
+                            <div className="d-flex mb-4">
+                                <div className="flex-shrink-0 btn-square rounded-circle bg-primary text-white">
+                                    <i className="fa fa-check"></i>
+                                </div>
+                                <div className="ms-4">
+                                    <h5>Flexible and scalable</h5>
+                                    <p className="mb-0">You can easily scale up or down to accommodate fluctuating attendee numbers and budgets across locations. Don't waste food - or money.</p>
+                                </div>
+                            </div>
+                            <div className="d-flex mb-4">
+                                <div className="flex-shrink-0 btn-square rounded-circle bg-primary text-white">
+                                    <i className="fa fa-check"></i>
+                                </div>
+                                <div className="ms-4">
+                                    <h5>Easy. Really easy.</h5>
+                                    <p className="mb-0">Once you are set up, OnlineCater takes care of all the logistics, from curating the restaurants to ordering support and delivery.</p>
+                                </div>
+                            </div>
+                            <a href="" className="btn btn-primary py-sm-3 px-sm-5 rounded-pill mt-3">Show Me More <FontAwesomeIcon icon={faCircleRight}/></a>
+                        </div>
+                        <div className="col-lg-6">
+                            <img className="img-fluid rounded wow zoomIn" data-wow-delay="0.5s" src="/img/about-1.png"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div className="container-xxl bg-light my-6 py-1" id="overview">
+                <div className="container">
+                    <div className="row g-5 py-5 align-items-center">
+                        <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                            <img className="img-fluid rounded" src="/img/control-order.png"/>
+                        </div>
+                        <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                            <div className="d-flex align-items-center mb-4">
+                                <h1 className="mb-0">01</h1>
+                                <span className="bg-primary mx-2" style={{width: '30px', height: '2px'}}></span>
+                                <h5 className="mb-0">See and control your food spend.</h5>
+                            </div>
+                            <p className="mb-4">See and control your ordering and spend with the OnlineCaterer Dashboard.</p>
+                            <p><i className="fa fa-check-circle text-primary me-3"></i>Easy budget management: Set limits on price per head, delivery fees, and more.</p>
+                            <p><i className="fa fa-check-circle text-primary me-3"></i>Simplified expense reporting: Attach custom billing codes. Keep digital receipts in one place. </p>
+                            <p className="mb-0"><i className="fa fa-check-circle text-primary me-3"></i>Convenient monthly invoicing: Get one monthly bill for all the OnlineCaterer orders across your orders. </p>
+                        </div>
+                    </div>
+                    <div className="row g-5 py-5 align-items-center flex-column-reverse flex-lg-row">
+                        <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                            <div className="d-flex align-items-center mb-4">
+                                <h1 className="mb-0">02</h1>
+                                <span className="bg-primary mx-2" style={{width: '30px', height: '2px'}}></span>
+                                <h5 className="mb-0">We build your orders. You save time</h5>
+                            </div>
+                            <p className="mb-4">Save time with Concierge Ordering. We build your orders. You review and approve.</p>
+                            <p><i className="fa fa-check-circle text-primary me-3"></i>Meet your catering concierge: Your corporate catering concierge will collect key details like delivery time, dietary needs, and budget.</p>
+                            <p><i className="fa fa-check-circle text-primary me-3"></i>Receive draft orders: Based on your specifications, your catering concierge will build draft orders for your approval and email you when they’re ready to review.</p>
+                            <p className="mb-0"><i className="fa fa-check-circle text-primary me-3"></i>Review and approve: You’ll review your catering orders and can make changes as needed, or have us do it. When everything looks good, check out and you’re done.</p>
+                        </div>
+                        <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                            <img className="img-fluid rounded" src="/img/concierge.png"/>
+                        </div>
+                    </div>
+                    <div className="row g-5 py-5 align-items-center">
+                        <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                            <img className="img-fluid rounded" src="/img/tax-exempt.png"/>
+                        </div>
+                        <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                            <div className="d-flex align-items-center mb-4">
+                                <h1 className="mb-0">03</h1>
+                                <span className="bg-primary mx-2" style={{width: '30px', height: '2px'}}></span>
+                                <h5 className="mb-0">Tax-exempt? One and done</h5>
+                            </div>
+                            <p className="mb-4">With Tax-Exempt Ordering, one upload of your tax certificate covers all your orders.</p>
+                            <p><i className="fa fa-check-circle text-primary me-3"></i>Submit your certificates. Use at a huge variety of restaurants.</p>
+                            <p><i className="fa fa-check-circle text-primary me-3"></i>No user management: When you upload your tax exempt status to your ezCater corporate account, it applies to all other team members on the account.</p>
+                            <p className="mb-0"><i className="fa fa-check-circle text-primary me-3"></i>Available everywhere: Over 1000 restaurants nationwide. We’ll apply the correct state tax certificate based on your order location.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div className="container-xxl bg-primary my-6 py-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div className="container">
+                    <div className="row g-4">
+                        <div className="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">
+                            <i className="fa fa-cogs fa-3x text-white mb-3"></i>
+                            <h1 className="mb-2 text-white" data-toggle="counter-up">1000+</h1>
+                            <p className="text-white mb-0">Restaurants Vietnam</p>
+                        </div>
+                        <div className="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.3s">
+                            <i className="fa fa-users fa-3x text-white mb-3"></i>
+                            <h1 className="mb-2 text-white" data-toggle="counter-up">100.000+</h1>
+                            <p className="text-white mb-0">Satisfied Clients</p>
+                        </div>
+                        <div className="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.5s">
+                            <i className="fa fa-certificate fa-3x text-white mb-3"></i>
+                            <h1 className="mb-2 text-white" data-toggle="counter-up">11</h1>
+                            <p className="text-white mb-0">Award Wins</p>
+                        </div>
+                        <div className="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
+                            <i className="fa fa-quote-left fa-3x text-white mb-3"></i>
+                            <h1 className="mb-2 text-white" data-toggle="counter-up">12.345+</h1>
+                            <p className="text-white mb-0">Clients Reviews</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div className="container-xxl py-6">
+                <div className="container">
+                    <div className="row g-5">
+                        <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                            <img className="img-fluid rounded" src="/img/table1.png"/>
+                        </div>
+                        <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                            <h1 className="mb-4">Three Simple Steps To Order</h1>
+                            <p className="mb-4">Diam dolor diam ipsum et tempor sit. Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit clita duo justo eirmod magna dolore erat amet</p>
+                            <ul className="process mb-0">
+                                <li>
+                                    <span><FontAwesomeIcon icon={faPizzaSlice}/></span>
+                                    <div>
+                                        <h5>Choose Restaurant and dishes</h5>
+                                        <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet
+                                            diam et eos erat ipsum et lorem et sit</p>
+                                    </div>
                                 </li>
-                                <li className="nav-item px-3 px-xl-4"><a className="nav-link fw-bold"
-                                                                         aria-current="page"
-                                                                         href="#destination">Destination</a></li>
-                                <li className="nav-item px-3 px-xl-4"><a className="nav-link fw-bold"
-                                                                         aria-current="page" href="#booking">Booking</a>
+                                <li>
+                                <span><FontAwesomeIcon icon={faLocationArrow}/></span>
+                                    <div>
+                                        <h5>Fill in delivery information</h5>
+                                        <p>Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et
+                                            lorem et sit, sed stet lorem sit clita duo</p>
+                                    </div>
                                 </li>
-                                <li className="nav-item px-3 px-xl-4"><a className="nav-link fw-bold"
-                                                                         aria-current="page"
-                                                                         href="#testimonial">About Us</a></li>
-                                <li className="nav-item px-3 px-xl-4"><Link
-                                    className="btn btn-outline-dark order-1 order-lg-0 fw-bold" to={'/login'}>Log In / Sign Up</Link>
+                                <li>
+                                <span><FontAwesomeIcon icon={faCreditCard}/></span>
+                                    <div>
+                                        <h5>Deposit or Pre-pay</h5>
+                                        <p>Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna</p>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                </nav>
-                <section style={{paddingTop: '7rem'}}>
-                    <div className="bg-holder" style={{backgroundImage: 'url(assets/img/hero/hero-bg.svg'}}>
+                </div>
+            </div>
+
+
+
+            <div className="container-xxl py-2" id="testimonial">
+                <div className="container">
+                    <div className="mx-auto text-center wow fadeInUp" data-wow-delay="0.1s" style={{maxWidth: '600px'}}>
+                        <h1 className="mb-3">What Our Clients Say</h1>
+                        <h5 className="mb-5">See why customers love us...</h5>
                     </div>
-
-                    <div className="container">
-                        <div className="row align-items-center">
-                            <div className="col-md-5 col-lg-6 order-0 order-md-1 text-end"><img
-                                className="pt-7 pt-md-0 hero-img" src="/img/hero/hero-img.png" alt="hero-header"/>
-                            </div>
-                            <div className="col-md-7 col-lg-6 text-md-start text-center py-6">
-                                <h4 className="fw-bold text-danger mb-3">Best Destinations around the world</h4>
-                                <h1 className="hero-title">Travel, enjoy and live a new and full life</h1>
-                                <p className="mb-4 fw-medium">Built Wicket longer admire do barton vanity itself do in
-                                    it.<br className="d-none d-xl-block"/>Preferred to sportsmen it engrossed listening.
-                                    Park gate<br className="d-none d-xl-block"/>sell they west hard for the.</p>
-                                <div className="text-center text-md-start"><a
-                                    className="btn btn-primary btn-lg me-md-4 mb-3 mb-md-0 border-0 primary-btn-shadow"
-                                    href="#!" role="button">Find out more</a>
-                                    <div className="w-100 d-block d-md-none"></div>
-                                    <a href="#!" role="button" data-bs-toggle="modal" data-bs-target="#popupVideo"><span
-                                        className="btn btn-primary round-btn-lg rounded-circle me-3 primary-btn-shadow"> <img
-                                        src="/img/hero/play.svg" width="15" alt="paly"/></span></a><span
-                                        className="fw-medium">Play Demo</span>
-                                    <div className="modal fade" id="popupVideo" tabIndex="-1"
-                                         aria-labelledby="popupVideo" aria-hidden="true">
-                                        <div className="modal-dialog modal-dialog-centered modal-lg">
-                                            <div className="modal-content">
-                                                <iframe className="rounded" style={{width:'100%', maxHeight:'500px'}}
-                                                        height="500px" src="https://www.youtube.com/embed/_lhdhL4UDIo"
-                                                        title="YouTube video player"
-                                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                                        allowFullScreen="allowfullscreen"></iframe>
-                                            </div>
-                                        </div>
+                    <div className="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+                        <div className="testimonial-item bg-light rounded my-4">
+                            <p className="fs-5"><i className="fa fa-quote-left fa-4x text-primary mt-n4 me-3"></i>OnlineCater has thought of everything so that I can focus on my business and not the lunch plan. It's amazing</p>
+                            <div className="d-flex align-items-center">
+                                <img className="img-fluid flex-shrink-0 rounded-circle" src="/img/avatar/man1.png" style={{width: '65px', height: '65px'}}/>
+                                    <div className="ps-4">
+                                        <h5 className="mb-1">Nguyen Duc Lam</h5>
+                                        <span>Profession</span>
                                     </div>
-                                </div>
                             </div>
                         </div>
-                    </div>
-                </section>
-
-
-                <section className="pt-5 pt-md-9" id="service">
-
-                    <div className="container">
-                        <div className="position-absolute z-index--1 end-0 d-none d-lg-block"><img
-                            src="/img/category/shape.svg" style={{maxWidth: '200px'}} alt="service"/></div>
-                        <div className="mb-7 text-center">
-                            <h5 className="text-secondary">CATEGORY </h5>
-                            <h3 className="fs-xl-10 fs-lg-8 fs-7 fw-bold font-cursive text-capitalize">We Offer Best
-                                Services</h3>
-                        </div>
-                        <div className="row">
-                            <div className="col-lg-3 col-sm-6 mb-6">
-                                <div
-                                    className="card service-card shadow-hover rounded-3 text-center align-items-center">
-                                    <div className="card-body p-xxl-5 p-4"><img src="/img/category/icon1.png"
-                                                                                width="75" alt="Service"/>
-                                        <h4 className="mb-3">Calculated Weather</h4>
-                                        <p className="mb-0 fw-medium">Built Wicket longer admire do barton vanity itself
-                                            do in it.</p>
+                        <div className="testimonial-item bg-light rounded my-4">
+                            <p className="fs-5"><i className="fa fa-quote-left fa-4x text-primary mt-n4 me-3"></i>Outstanding service, incredibly easy to search and order, and flawless communication at all stages. 10/10 recommend!</p>
+                            <div className="d-flex align-items-center">
+                                <img className="img-fluid flex-shrink-0 rounded-circle" src="/img/avatar/man2.png" style={{width: '65px', height: '65px'}}/>
+                                    <div className="ps-4">
+                                        <h5 className="mb-1">Nguyen Van Truong</h5>
+                                        <span>Profession</span>
                                     </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-3 col-sm-6 mb-6">
-                                <div
-                                    className="card service-card shadow-hover rounded-3 text-center align-items-center">
-                                    <div className="card-body p-xxl-5 p-4"><img src="/img/category/icon2.png"
-                                                                                width="75" alt="Service"/>
-                                        <h4 className="mb-3">Best Flights</h4>
-                                        <p className="mb-0 fw-medium">Engrossed listening. Park gate sell they west hard
-                                            for.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-3 col-sm-6 mb-6">
-                                <div
-                                    className="card service-card shadow-hover rounded-3 text-center align-items-center">
-                                    <div className="card-body p-xxl-5 p-4"><img src="/img/category/icon3.png"
-                                                                                width="75" alt="Service"/>
-                                        <h4 className="mb-3">Local Events</h4>
-                                        <p className="mb-0 fw-medium">Barton vanity itself do in it. Preferd to men it
-                                            engrossed.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-3 col-sm-6 mb-6">
-                                <div
-                                    className="card service-card shadow-hover rounded-3 text-center align-items-center">
-                                    <div className="card-body p-xxl-5 p-4"><img src="/img/category/icon4.png"
-                                                                                width="75" alt="Service"/>
-                                        <h4 className="mb-3">Customization</h4>
-                                        <p className="mb-0 fw-medium">We deliver outsourced aviation services for
-                                            military.</p>
-                                    </div>
-                                </div>
                             </div>
                         </div>
-                    </div>
-
-                </section>
-
-
-                <section className="pt-5" id="destination">
-
-                    <div className="container">
-                        <div
-                            className="position-absolute start-100 bottom-0 translate-middle-x d-none d-xl-block ms-xl-n4">
-                            <img src="/img/dest/shape.svg" alt="destination"/></div>
-                        <div className="mb-7 text-center">
-                            <h5 className="text-secondary">Top Selling </h5>
-                            <h3 className="fs-xl-10 fs-lg-8 fs-7 fw-bold font-cursive text-capitalize">Top
-                                Destinations</h3>
-                        </div>
-                        <div className="row">
-                            <div className="col-md-4 mb-4">
-                                <div className="card overflow-hidden shadow"><img className="card-img-top"
-                                                                                  src="/img/dest/dest1.jpg"
-                                                                                  alt="Rome, Italty"/>
-                                    <div className="card-body py-4 px-3">
-                                        <div className="d-flex flex-column flex-lg-row justify-content-between mb-3">
-                                            <h4 className="text-secondary fw-medium"><a
-                                                className="link-900 text-decoration-none stretched-link" href="#!">Rome,
-                                                Italty</a></h4><span className="fs-1 fw-medium">$5,42k</span>
-                                        </div>
-                                        <div className="d-flex align-items-center"><img
-                                            src="/img/dest/navigation.svg" style={{marginRight: '14px'}} width="20"
-                                            alt="navigation"/><span className="fs-0 fw-medium">10 Days Trip</span></div>
+                        <div className="testimonial-item bg-light rounded my-4">
+                            <p className="fs-5"><i className="fa fa-quote-left fa-4x text-primary mt-n4 me-3"></i>Communication was excellent. I would receive text message to let me know the status of my order. I really liked that I received a message the day of delivery and food was delivered on time! I really like that there are many restaurants to choose from and it was easy to set up for a nonprofit with tax exemption. Easy to use ordering system.</p>
+                            <div className="d-flex align-items-center">
+                                <img className="img-fluid flex-shrink-0 rounded-circle" src="/img/avatar/man3.png" style={{width: '65px', height: '65px'}}/>
+                                    <div className="ps-4">
+                                        <h5 className="mb-1">Nguyen Van Toan</h5>
+                                        <span>Profession</span>
                                     </div>
-                                </div>
-                            </div>
-                            <div className="col-md-4 mb-4">
-                                <div className="card overflow-hidden shadow"><img className="card-img-top"
-                                                                                  src="/img/dest/dest2.jpg"
-                                                                                  alt="London, UK"/>
-                                    <div className="card-body py-4 px-3">
-                                        <div className="d-flex flex-column flex-lg-row justify-content-between mb-3">
-                                            <h4 className="text-secondary fw-medium"><a
-                                                className="link-900 text-decoration-none stretched-link" href="#!">London,
-                                                UK</a></h4><span className="fs-1 fw-medium">$4.2k</span>
-                                        </div>
-                                        <div className="d-flex align-items-center"><img
-                                            src="/img/dest/navigation.svg" style={{marginRight: '14px'}} width="20"
-                                            alt="navigation"/><span className="fs-0 fw-medium">12 Days Trip</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-md-4 mb-4">
-                                <div className="card overflow-hidden shadow"><img className="card-img-top"
-                                                                                  src="/img/dest/dest3.jpg"
-                                                                                  alt="Full Europe"/>
-                                    <div className="card-body py-4 px-3">
-                                        <div className="d-flex flex-column flex-lg-row justify-content-between mb-3">
-                                            <h4 className="text-secondary fw-medium"><a
-                                                className="link-900 text-decoration-none stretched-link" href="#!">Full
-                                                Europe</a></h4><span className="fs-1 fw-medium">$15k</span>
-                                        </div>
-                                        <div className="d-flex align-items-center"><img
-                                            src="/img/dest/navigation.svg" style={{marginRight: '14px'}} width="20"
-                                            alt="navigation"/><span className="fs-0 fw-medium">28 Days Trip</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </section>
-
-
-                <section id="booking">
-
-                    <div className="container">
-                        <div className="row align-items-center">
-                            <div className="col-lg-6">
-                                <div className="mb-4 text-start">
-                                    <h5 className="text-secondary">Easy and Fast </h5>
-                                    <h3 className="fs-xl-10 fs-lg-8 fs-7 fw-bold font-cursive text-capitalize">Book your
-                                        next trip in 3 easy steps</h3>
-                                </div>
-                                <div className="d-flex align-items-start mb-5">
-                                    <div className="bg-primary me-sm-4 me-3 p-3" style={{borderRadius: '13px'}}><img
-                                        src="/img/steps/selection.svg" width="22" alt="steps"/></div>
-                                    <div className="flex-1">
-                                        <h5 className="text-secondary fw-bold fs-0">Choose Destination</h5>
-                                        <p>Choose your favourite place. No matter <br
-                                            className="d-none d-sm-block"/> where you travel inside the World.</p>
-                                    </div>
-                                </div>
-                                <div className="d-flex align-items-start mb-5">
-                                    <div className="bg-danger me-sm-4 me-3 p-3" style={{borderRadius: '13px'}}><img
-                                        src="/img/steps/water-sport.svg" width="22" alt="steps"/></div>
-                                    <div className="flex-1">
-                                        <h5 className="text-secondary fw-bold fs-0">Make Payment</h5>
-                                        <p>After find your perfect spot, make your <br
-                                            className="d-none d-sm-block"/> payment and get ready to travel.</p>
-                                    </div>
-                                </div>
-                                <div className="d-flex align-items-start mb-5">
-                                    <div className="bg-info me-sm-4 me-3 p-3" style={{borderRadius: '13px'}}><img
-                                        src="/img/steps/taxi.svg" width="22" alt="steps"/></div>
-                                    <div className="flex-1">
-                                        <h5 className="text-secondary fw-bold fs-0">Reach Airport on Selected Date</h5>
-                                        <p>Lastly, you have to arrive at the airport <br
-                                            className="d-none d-sm-block"/> on time and enjoy the vacation.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-6 d-flex justify-content-center align-items-start">
-                                <div className="card position-relative shadow" style={{maxWidth: '370px'}}>
-                                    <div className="position-absolute z-index--1 me-10 me-xxl-0"
-                                         style={{right:'-160px', top:'-210px'}}><img src="/img/steps/bg.png"
-                                                                               style={{maxWidth: '550px'}} alt="shape"/>
-                                    </div>
-                                    <div className="card-body p-3"><img className="mb-4 mt-2 rounded-2 w-100"
-                                                                        src="/img/steps/booking-img.jpg"
-                                                                        alt="booking"/>
-                                        <div>
-                                            <h5 className="fw-medium">Trip To Greece</h5>
-                                            <p className="fs--1 mb-3 fw-medium">14-29 June | by Robbin joseph</p>
-                                            <div className="icon-group mb-4"><span className="btn icon-item"> <img
-                                                src="/img/steps/leaf.svg" alt=""/></span><span
-                                                className="btn icon-item"> <img src="/img/steps/map.svg" alt=""/></span><span
-                                                className="btn icon-item"> <img src="/img/steps/send.svg" alt=""/></span>
-                                            </div>
-                                            <div className="d-flex align-items-center justify-content-between">
-                                                <div className="d-flex align-items-center mt-n1"><img className="me-3"
-                                                                                                      src="/img/steps/building.svg"
-                                                                                                      width="18"
-                                                                                                      alt="building"/><span
-                                                    className="fs--1 fw-medium">24 people going</span></div>
-                                                <div className="show-onhover position-relative">
-                                                    <div
-                                                        className="card hideEl shadow position-absolute end-0 start-xl-50 bottom-100 translate-xl-middle-x ms-3"
-                                                        style={{width: '260px', borderRadius:'18px'}}>
-                                                        <div className="card-body py-3">
-                                                            <div className="d-flex">
-                                                                <div style={{marginRight: '10px'}}><img
-                                                                    className="rounded-circle"
-                                                                    src="/img/steps/favorite-placeholder.png"
-                                                                    width="50" alt="favorite"/></div>
-                                                                <div>
-                                                                    <p className="fs--1 mb-1 fw-medium">Ongoing </p>
-                                                                    <h5 className="fw-medium mb-3">Trip to rome</h5>
-                                                                    <h6 className="fs--1 fw-medium mb-2">
-                                                                        <span>40%</span> completed</h6>
-                                                                    <div className="progress" style={{height: '6px'}}>
-                                                                        <div className="progress-bar" role="progressbar"
-                                                                             style={{width: '40%'}} aria-valuenow="25"
-                                                                             aria-valuemin="0"
-                                                                             aria-valuemax="100"></div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <button className="btn"><img src="/img/steps/heart.svg"
-                                                                                 width="20" alt="step"/></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </section>
-
-
-                <section id="testimonial">
-
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-lg-5">
-                                <div className="mb-8 text-start">
-                                    <h5 className="text-secondary">Testimonials </h5>
-                                    <h3 className="fs-xl-10 fs-lg-8 fs-7 fw-bold font-cursive text-capitalize">What
-                                        people say about Us.</h3>
-                                </div>
-                            </div>
-                            <div className="col-lg-1"></div>
-                            <div className="col-lg-6">
-                                <div className="pe-7 ps-5 ps-lg-0">
-                                    <div className="carousel slide carousel-fade position-static"
-                                         id="testimonialIndicator" data-bs-ride="carousel">
-                                        <div className="carousel-indicators">
-                                            <button className="active" type="button"
-                                                    data-bs-target="#testimonialIndicator" data-bs-slide-to="0"
-                                                    aria-current="true" aria-label="Testimonial 0"></button>
-                                            <button className="false" type="button"
-                                                    data-bs-target="#testimonialIndicator" data-bs-slide-to="1"
-                                                    aria-current="true" aria-label="Testimonial 1"></button>
-                                            <button className="false" type="button"
-                                                    data-bs-target="#testimonialIndicator" data-bs-slide-to="2"
-                                                    aria-current="true" aria-label="Testimonial 2"></button>
-                                        </div>
-                                        <div className="carousel-inner">
-                                            <div className="carousel-item position-relative active">
-                                                <div className="card shadow" style={{borderRadius: '10px'}}>
-                                                    <div className="position-absolute start-0 top-0 translate-middle">
-                                                        <img className="rounded-circle fit-cover"
-                                                             src="/img/testimonial/author.png" style={{ height: '65px', width: '65px' }} alt=""/></div>
-                                                    <div className="card-body p-4">
-                                                        <p className="fw-medium mb-4">&quot;On the Windows talking
-                                                            painted pasture yet its express parties use. Sure last upon
-                                                            he same as knew next. Of believed or diverted no.&quot;</p>
-                                                        <h5 className="text-secondary">Mike taylor</h5>
-                                                        <p className="fw-medium fs--1 mb-0">Lahore, Pakistan</p>
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    className="card shadow-sm position-absolute top-0 z-index--1 mb-3 w-100 h-100"
-                                                    style={{borderRadius:'10px', transform:'translate(25px, 25px)'}}></div>
-                                            </div>
-                                            <div className="carousel-item position-relative ">
-                                                <div className="card shadow" style={{borderRadius: '10px'}}>
-                                                    <div className="position-absolute start-0 top-0 translate-middle">
-                                                        <img className="rounded-circle fit-cover"
-                                                             src="/img/testimonial/author2.png" style={{ height: '65px', width: '65px' }} alt=""/></div>
-                                                    <div className="card-body p-4">
-                                                        <p className="fw-medium mb-4">&quot;Jadoo is recognized as one
-                                                            of the finest travel agency in the world. When it came to
-                                                            planning a trip, I found them to be dependable.&quot;</p>
-                                                        <h5 className="text-secondary">Thomas Wagon</h5>
-                                                        <p className="fw-medium fs--1 mb-0">CEO of Red Button</p>
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    className="card shadow-sm position-absolute top-0 z-index--1 mb-3 w-100 h-100"
-                                                    style={{borderRadius:'10px', transform:'translate(25px, 25px)'}}></div>
-                                            </div>
-                                            <div className="carousel-item position-relative ">
-                                                <div className="card shadow" style={{borderRadius: '10px'}}>
-                                                    <div className="position-absolute start-0 top-0 translate-middle">
-                                                        <img className="rounded-circle fit-cover"
-                                                             src="/img/testimonial/author3.png" style={{ height: '65px', width: '65px' }} alt=""/></div>
-                                                    <div className="card-body p-4">
-                                                        <p className="fw-medium mb-4">&quot;On the Windows talking
-                                                            painted pasture yet its express parties use. Sure last upon
-                                                            he same as knew next. Of believed or diverted no.&quot;</p>
-                                                        <h5 className="text-secondary">Kelly Willium</h5>
-                                                        <p className="fw-medium fs--1 mb-0">Khulna, Bangladesh</p>
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    className="card shadow-sm position-absolute top-0 z-index--1 mb-3 w-100 h-100"
-                                                    style={{borderRadius:'10px', transform:'translate(25px, 25px)'}}></div>
-                                            </div>
-                                        </div>
-                                        <div
-                                            className="carousel-navigation d-flex flex-column flex-between-center position-absolute end-0 top-lg-50 bottom-0 translate-middle-y z-index-1 me-3 me-lg-0"
-                                            style={{height:'60px',width:'20px'}}>
-                                            <button className="carousel-control-prev position-static" type="button"
-                                                    data-bs-target="#testimonialIndicator" data-bs-slide="prev"><img
-                                                src="/img/icons/up.svg" width="16" alt="icon"/></button>
-                                            <button className="carousel-control-next position-static" type="button"
-                                                    data-bs-target="#testimonialIndicator" data-bs-slide="next"><img
-                                                src="/img/icons/down.svg" width="16" alt="icon"/></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </section>
-
-
-                <div className="position-relative pt-9 pt-lg-8 pb-6 pb-lg-8">
-                    <div className="container">
-                        <div className="row row-cols-lg-5 row-cols-md-3 row-cols-2 flex-center">
-                            <div className="col">
-                                <div className="card shadow-hover mb-4" style={{borderRadius: '10px'}}>
-                                    <div className="card-body text-center"><img className="img-fluid"
-                                                                                src="/img/partner/1.png" alt=""/>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col">
-                                <div className="card shadow-hover mb-4" style={{borderRadius: '10px'}}>
-                                    <div className="card-body text-center"><img className="img-fluid"
-                                                                                src="/img/partner/2.png" alt=""/>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col">
-                                <div className="card shadow-hover mb-4" style={{borderRadius: '10px'}}>
-                                    <div className="card-body text-center"><img className="img-fluid"
-                                                                                src="/img/partner/3.png" alt=""/>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col">
-                                <div className="card shadow-hover mb-4" style={{borderRadius: '10px'}}>
-                                    <div className="card-body text-center"><img className="img-fluid"
-                                                                                src="/img/partner/4.png" alt=""/>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col">
-                                <div className="card shadow-hover mb-4" style={{borderRadius: '10px'}}>
-                                    <div className="card-body text-center"><img className="img-fluid"
-                                                                                src="/img/partner/5.png" alt=""/>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
 
-                <section className="pt-6">
-
-                    <div className="container">
-                        <div className="py-8 px-5 position-relative text-center"
-                             style={{backgroundColor: 'rgba(30, 161, 241, 0.1)',borderRadius: '129px 20px 20px 20px'}}>
-                            <div className="position-absolute start-100 top-0 translate-middle ms-md-n3 ms-n4 mt-3"><img
-                                src="/img/cta/send.png" style={{maxWidth: '70px'}} alt="send icon"/></div>
-                            <div className="position-absolute end-0 top-0 z-index--1"><img
-                                src="/img/cta/shape-bg2.png" width="264" alt="cta shape"/></div>
-                            <div className="position-absolute start-0 bottom-0 ms-3 z-index--1 d-none d-sm-block"><img
-                                src="/img/cta/shape-bg1.png" style={{maxWidth: '340px'}} alt="cta shape"/></div>
-                            <div className="row justify-content-center">
-                                <div className="col-lg-8 col-md-10">
-                                    <h2 className="text-secondary lh-1-7 mb-7">Subscribe to get information, latest news
-                                        and other interesting offers about Cobham</h2>
-                                    <form className="row g-3 align-items-center w-lg-75 mx-auto">
-                                        <div className="col-sm">
-                                            <div className="input-group-icon">
-                                                <input className="form-control form-little-squirrel-control"
-                                                       type="email" placeholder="Enter email " aria-label="email"/><img
-                                                className="input-box-icon" src="/img/cta/mail.svg" width="17"
-                                                alt="mail"/>
-                                            </div>
-                                        </div>
-                                        <div className="col-sm-auto">
-                                            <button className="btn btn-primary btn-subscribe fs--1">Subscribe
-                                            </button>
-                                        </div>
-                                    </form>
+            <div className="container-xxl py-4" id="contact">
+                <div className="container">
+                    <div className="row g-5">
+                        <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                            <h1 className="mb-3">Get In Touch</h1>
+                            <p className="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
+                            <div className="d-flex mb-4">
+                                <div className="flex-shrink-0 btn-square rounded-circle bg-primary text-white">
+                                    <i className="fa fa-phone-alt"></i>
+                                </div>
+                                <div className="ms-3">
+                                    <p className="mb-2">Call Us</p>
+                                    <h5 className="mb-0">+84 988 888 888</h5>
+                                </div>
+                            </div>
+                            <div className="d-flex mb-4">
+                                <div className="flex-shrink-0 btn-square rounded-circle bg-primary text-white">
+                                    <i className="fa fa-envelope"></i>
+                                </div>
+                                <div className="ms-3">
+                                    <p className="mb-2">Mail Us</p>
+                                    <h5 className="mb-0">info@onlinecaterer.vn</h5>
+                                </div>
+                            </div>
+                            <div className="d-flex mb-0">
+                                <div className="flex-shrink-0 btn-square rounded-circle bg-primary text-white">
+                                    <i className="fa fa-map-marker-alt"></i>
+                                </div>
+                                <div className="ms-3">
+                                    <p className="mb-2">Our Office</p>
+                                    <h5 className="mb-0">01 Dinh Tien Hoang Str., Hoan Kiem Dist., Ha Noi</h5>
                                 </div>
                             </div>
                         </div>
+                        <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                            <form>
+                                <div className="row g-3">
+                                    <div className="col-md-6">
+                                        <div className="form-floating">
+                                            <input type="text" className="form-control" id="name" placeholder="Your Name"/>
+                                                <label for="name">Your Name</label>
+                                        </div>
+                                    </div>
+                                    <div className="col-md-6">
+                                        <div className="form-floating">
+                                            <input type="email" className="form-control" id="email" placeholder="Your Email"/>
+                                                <label for="email">Your Email</label>
+                                        </div>
+                                    </div>
+                                    <div className="col-12">
+                                        <div className="form-floating">
+                                            <input type="text" className="form-control" id="subject" placeholder="Subject"/>
+                                                <label for="subject">Subject</label>
+                                        </div>
+                                    </div>
+                                    <div className="col-12">
+                                        <div className="form-floating">
+                                            <textarea className="form-control" placeholder="Leave a message here" id="message" style={{height: '150px'}}></textarea>
+                                            <label for="message">Message</label>
+                                        </div>
+                                    </div>
+                                    <div className="col-12">
+                                        <button className="btn btn-primary rounded-pill py-3 px-5" type="submit">Send Message</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                     </div>
+                </div>
+            </div>
 
-                </section>
 
-
-                <section className="pb-0 pb-lg-4">
-
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-lg-3 col-md-7 col-12 mb-4 mb-md-6 mb-lg-0 order-0"><img className="mb-4"
-                                                                                                        src="/img/logo2.svg"
-                                                                                                        width="150"
-                                                                                                        alt="jadoo"/>
-                                <p className="fs--1 text-secondary mb-0 fw-medium">Book your trip in minute, get full
-                                    Control for much longer.</p>
+            <div className="container-fluid bg-primary text-body footer wow fadeIn" data-wow-delay="0.1s">
+                <div className="container py-5 px-lg-5">
+                    <div className="row g-5">
+                        <div className="col-md-6 col-lg-4">
+                            <p className="section-title text-white h5 mb-4">Address<span></span></p>
+                            <p className={'text-white'}><i className="bi bi-map me-3 text-white"></i>01 Dinh Tien Hoang Str., Ha Noi</p>
+                            <p className={'text-white'}><i className="bi bi-phone me-3 text-white"></i>+84 988 888 888</p>
+                            <p className={'text-white'}><i className="bi bi-envelope me-3 text-white"></i>info@onlinecaterer.vn</p>
+                            <div className="d-flex pt-2">
+                                <Link className="btn btn-outline-light btn-social" to={''}><i className="bi bi-twitter"></i></Link>
+                                <Link className="btn btn-outline-light btn-social" to={''}><i className="bi bi-facebook"></i></Link>
+                                <Link className="btn btn-outline-light btn-social" to={''}><i className="bi bi-instagram"></i></Link>
+                                <Link className="btn btn-outline-light btn-social" to={''}><i className="bi bi-linkedin"></i></Link>
                             </div>
-                            <div className="col-lg-2 col-md-4 mb-4 mb-lg-0 order-lg-1 order-md-2">
-                                <h4 className="footer-heading-color fw-bold font-sans-serif mb-3 mb-lg-4">Company</h4>
-                                <ul className="list-unstyled mb-0">
-                                    <li className="mb-2"><a className="link-900 fs-1 fw-medium text-decoration-none"
-                                                            href="#!">About</a></li>
-                                    <li className="mb-2"><a className="link-900 fs-1 fw-medium text-decoration-none"
-                                                            href="#!">Careers</a></li>
-                                    <li className="mb-2"><a className="link-900 fs-1 fw-medium text-decoration-none"
-                                                            href="#!">Mobile</a></li>
-                                </ul>
-                            </div>
-                            <div className="col-lg-2 col-md-4 mb-4 mb-lg-0 order-lg-2 order-md-3">
-                                <h4 className="footer-heading-color fw-bold font-sans-serif mb-3 mb-lg-4">Contact</h4>
-                                <ul className="list-unstyled mb-0">
-                                    <li className="mb-2"><a className="link-900 fs-1 fw-medium text-decoration-none"
-                                                            href="#!">Help/FAQ</a></li>
-                                    <li className="mb-2"><a className="link-900 fs-1 fw-medium text-decoration-none"
-                                                            href="#!">Press</a></li>
-                                    <li className="mb-2"><a className="link-900 fs-1 fw-medium text-decoration-none"
-                                                            href="#!">Affiliate</a></li>
-                                </ul>
-                            </div>
-                            <div className="col-lg-2 col-md-4 mb-4 mb-lg-0 order-lg-3 order-md-4">
-                                <h4 className="footer-heading-color fw-bold font-sans-serif mb-3 mb-lg-4">More</h4>
-                                <ul className="list-unstyled mb-0">
-                                    <li className="mb-2"><a className="link-900 fs-1 fw-medium text-decoration-none"
-                                                            href="#!">Airlinefees</a></li>
-                                    <li className="mb-2"><a className="link-900 fs-1 fw-medium text-decoration-none"
-                                                            href="#!">Airline</a></li>
-                                    <li className="mb-2"><a className="link-900 fs-1 fw-medium text-decoration-none"
-                                                            href="#!">Low fare tips</a></li>
-                                </ul>
-                            </div>
-                            <div className="col-lg-3 col-md-5 col-12 mb-4 mb-md-6 mb-lg-0 order-lg-4 order-md-1">
-                                <div className="icon-group mb-4"><a
-                                    className="text-decoration-none icon-item shadow-social" id="facebook" href="#!"><i
-                                    className="fab fa-facebook-f"> </i></a><a
-                                    className="text-decoration-none icon-item shadow-social" id="instagram" href="#!"><i
-                                    className="fab fa-instagram"> </i></a><a
-                                    className="text-decoration-none icon-item shadow-social" id="twitter" href="#!"><i
-                                    className="fab fa-twitter"> </i></a></div>
-                                <h4 className="fw-medium font-sans-serif text-secondary mb-3">Discover our app</h4>
-                                <div className="d-flex align-items-center"><a href="#!"> <img className="me-2"
-                                                                                              src="/img/play-store.png"
-                                                                                              alt="play store"/></a><a
-                                    href="#!"> <img src="/img/apple-store.png" alt="apple store"/></a></div>
+                        </div>
+                        <div className="col-md-6 col-lg-4">
+                            <p className="section-title text-white h5 mb-4">Quick Links<span></span></p>
+                            <Link className="btn btn-link text-white" to={''}>Order</Link>
+                            <Link className="btn btn-link text-white" to={''}>Corporate catering solutions</Link>
+                            <Link className="btn btn-link text-white" to={''}>Contact</Link>
+                            <Link className="btn btn-link text-white" to={''}>About</Link>
+                        </div>
+                        <div className="col-md-6 col-lg-4">
+                            <p className="section-title text-white h5 mb-4">Newsletter<span></span></p>
+                            <p className={'text-white'}>Subscribe now for delicious updates straight to your inbox!</p>
+                            <div className="position-relative w-100 mt-3">
+                                <input className="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text" placeholder="Your Email" style={{height: '48px'}}/>
+                                    <button type="button" className="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i className="fa fa-paper-plane text-primary fs-4"></i></button>
                             </div>
                         </div>
                     </div>
-
-                </section>
-
-
-                <div className="py-5 text-center">
-                    <p className="mb-0 text-secondary fs--1 fw-medium">All rights reserved@jadoo.co </p>
                 </div>
-            </main>
+                <div className="container">
+                    <div className="copyright">
+                        <div className="row">
+                            <div className="text-center">
+                                <p className="mb-0 text-white fs--1 fw-medium">©OnlineCaterer 2024. All rights reserved</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }
 
-export default Home;
+export default HomePage;

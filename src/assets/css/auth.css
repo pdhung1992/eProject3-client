@@ -1,7 +1,6 @@
 
 .auth-page{
-    background-color: #fff;
-}
+    background-color: #f0f2f5;}
 
 .auth-img{
     width: 100%;
@@ -9,6 +8,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.hero-title{
+    color: #1da1f2;
 }
 
 .auth-form{
@@ -22,3 +25,9 @@
     width: 85%;
     text-align: center;
 }
+
+.form-input{
+    background-color: #f0f2f5;
+    border-color: #1da1f2;
+}
+

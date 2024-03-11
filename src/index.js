@@ -5,9 +5,16 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap';
-import 'bootstrap/dist/js/bootstrap.bundle';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import 'font-awesome/css/font-awesome.css';
+import '@fortawesome/fontawesome-svg-core/styles.css';
+import '@fortawesome/react-fontawesome/index';
+
+//js
 import 'jquery';
+import 'bootstrap/dist/js/bootstrap.bundle';
+import 'easing-js/easing';
+import 'waypoints/src/waypoint';
 
 import App from './App';
 import reportWebVitals from './reportWebVitals';
