@@ -8,9 +8,9 @@ import {Link} from "react-router-dom";
 
 const HomePage = () => {
     return(
-        <div className="container-xxl p-0">
-            <div className="container-xxl position-relative p-0">
-                <div className="container-xxl bg-hero hero-header">
+        <div className=" p-0">
+            <div className=" position-relative p-0">
+                <div className=" bg-hero hero-header">
                     <div className="container">
                         <div className="row g-5 align-items-center">
                             <div className="col-lg-6 text-center text-lg-start">
@@ -159,7 +159,7 @@ const HomePage = () => {
 
 
 
-            <div className="container-xxl bg-primary my-6 py-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div className=" bg-primary my-6 py-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div className="container">
                     <div className="row g-4">
                         <div className="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">

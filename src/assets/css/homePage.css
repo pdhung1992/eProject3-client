@@ -125,6 +125,12 @@ h6,
     text-decoration: none;
 }
 
+.btn-danger{
+    min-width: 60px;
+    background-color: #FFFFFF;
+    color: #DC3545;
+}
+
 
 /*** Navbar ***/
 .navbar .dropdown-toggle::after {
@@ -286,6 +292,7 @@ h6,
     margin-bottom: 6rem;
     padding: 9rem 0;
     background: url(/public/img/bg-bottom.png) center bottom no-repeat;
+    background-size: 100% auto;
 }
 
 .bg-hero {
@@ -530,17 +537,32 @@ h6,
 }
 
 .restaurant-card{
+     margin: 1rem;
+     width: calc(50% - 3rem);
+     min-height: 10rem;
+ }
+
+.restaurant-filter{
     margin: 1rem;
-    width: calc(50% - 3rem);
-    min-height: 10rem;
+    width: calc(25% - 3rem);
+}
+
+.restaurant-filter-selected{
+    border: 2px solid #00457c;
 }
 
 .restaurant-thumb{
     padding-right: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .restaurant-thumb img{
     border-radius: 5%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .restaurant-desc h5{
@@ -550,6 +572,8 @@ h6,
 .restaurant-detail{
     padding-right: 1rem ;
     color: var(--dark);
+    overflow: auto;
+    height: 100vh;
 }
 
 .restaurant-detail h2{
@@ -576,10 +600,54 @@ h6,
     color: var(--dark);
 }
 
-.fixed-menu {
-    position: fixed;
-    top: 4rem;
-    width: 50%;
-    z-index: 1000;
-    /*border-bottom: 1px solid #eaeaea;*/
+.menu-collapse .ant-collapse-header{
+    color: var(--dark) !important;
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: flex !important;
+    align-items: center !important;
 }
+
+.menu-collapse .ant-collapse-arrow {
+
+    color: var(--dark) !important;
+    font-size: 1.5rem !important;
+    font-weight: 600 !important;
+    margin-left: auto;
+}
+
+.ant-checkbox-inner{
+    width: 24px !important;
+    height: 24px !important;
+}
+
+.order-cart{
+    height: 100vh;
+    padding-left: 1rem;
+    color: var(--dark);
+}
+
+.order-cart .cart-header{
+    height: 8vh;
+}
+
+.order-cart .cart-content{
+    max-height: 70vh;
+    overflow: auto;
+}
+
+.order-cart .cart-footer{
+    height: 22vh;
+}
+
+.order-cart .cart-footer .btn-primary{
+    width: 100%;
+}
+
+.btn-cart-del{
+    color: #DC3545;
+}.btn-cart-del:hover{
+    background-color: #DC3545;
+    color: #FFFFFF;
+    transition: 0.3s ease-in;
+ }
